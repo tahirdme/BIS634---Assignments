@@ -1,0 +1,13 @@
+<html>
+	<body>
+		<h1>Cases per 100k Population for all US States</h1>
+		<div id='chart' class='chart'”></div>
+	</body>
+	
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+	<script type='text/javascript'>
+	  var graphs = {{graphJSON | safe}};
+	  Plotly.plot('chart',graphs,{});
+	</script>
+	<a href="{{ url_for('index') }}">Go back</a>
+</html>
